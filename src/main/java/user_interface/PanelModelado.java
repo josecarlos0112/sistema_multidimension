@@ -6,10 +6,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 public class PanelModelado extends JPanel {
     private DefaultListModel<Pareja> listModel;
     private JList<Pareja> list;
+    private Random random = new Random();
 
     public PanelModelado() {
         setLayout(new BorderLayout());
@@ -26,21 +28,32 @@ public class PanelModelado extends JPanel {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Aquí puedes agregar el código para agregar una nueva pareja a la lista
+                // Genera una nueva pareja con elementos aleatorios y la agrega a la lista
+                Pareja pareja = new Pareja(random.nextInt(100), random.nextInt(100));
+                listModel.addElement(pareja);
             }
         });
 
         removeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Aquí puedes agregar el código para eliminar una pareja de la lista
+                // Elimina la pareja seleccionada actualmente de la lista
+                int selectedIndex = list.getSelectedIndex();
+                if (selectedIndex != -1) {
+                    listModel.remove(selectedIndex);
+                }
             }
         });
 
         modifyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Aquí puedes agregar el código para modificar una pareja de la lista
+                // Modifica la pareja seleccionada actualmente en la lista a una nueva pareja generada aleatoriamente
+                int selectedIndex = list.getSelectedIndex();
+                if (selectedIndex != -1) {
+                    Pareja pareja = new Pareja(random.nextInt(100), random.nextInt(100));
+                    listModel.set(selectedIndex, pareja);
+                }
             }
         });
 
