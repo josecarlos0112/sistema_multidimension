@@ -30,7 +30,7 @@ public class Main extends JFrame {
         String iconPath = "src/resources/uax-corto.png";
         ImageIcon icon = new ImageIcon(iconPath);
         setIconImage(icon.getImage());
-        setTitle("Sistema de Gestión de Publicaciones");
+        setTitle("Sistema de Gestión y Análisis de Datos Multidimensionales");
         setSize(1000, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -70,11 +70,11 @@ public class Main extends JFrame {
 
         // Textos para los botones
         String[] textosBotones = {
-                "Editor de Texto Interactivo",
-                "Comparador y Contador de Contenido ",
-                "Gestión de Contactos",
+                "Gestión de Datos Dinámicos",
+                "Análisis y Organización de Información",
+                "Mapas y Asociación de Datos",
                 "Interfaz Gráfica Avanzada",
-                "Diseño Gráfico"
+                "Indexación y Visualización de Archivos"
         };
 
         // Crear y agregar los botones al panel derecho
