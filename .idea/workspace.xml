@@ -4,15 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fba71096-2cff-4499-9b09-6e5132df268b" name="Changes" comment="Creacion del proyecto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/Pareja.java" afterDir="false" />
+    <list default="true" id="fba71096-2cff-4499-9b09-6e5132df268b" name="Changes" comment="Creacion de los packages">
+      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/DatoEntero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/DatoReal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Pareja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Pareja.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,7 +94,7 @@
       <updated>1713785958637</updated>
       <workItem from="1713785959783" duration="1226000" />
       <workItem from="1713787240848" duration="1311000" />
-      <workItem from="1713860368037" duration="572000" />
+      <workItem from="1713860368037" duration="834000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion del proyecto">
       <option name="closed" value="true" />
@@ -104,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713787275915</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Creacion de los packages">
+      <option name="closed" value="true" />
+      <created>1713861716099</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713861716099</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creacion del proyecto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creacion del proyecto" />
+    <MESSAGE value="Creacion de los packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creacion de los packages" />
   </component>
 </project>
