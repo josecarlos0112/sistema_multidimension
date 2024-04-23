@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fba71096-2cff-4499-9b09-6e5132df268b" name="Changes" comment="Creacion de clases del primer package y actualizacion del main">
-      <change afterPath="$PROJECT_DIR$/src/main/java/user_interface/InterfazUsuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/user_interface/PanelDatos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/user_interface/PanelOrganizacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +56,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -121,7 +119,8 @@
       <updated>1713785958637</updated>
       <workItem from="1713785959783" duration="1226000" />
       <workItem from="1713787240848" duration="1311000" />
-      <workItem from="1713860368037" duration="5105000" />
+      <workItem from="1713860368037" duration="6145000" />
+      <workItem from="1713912128928" duration="621000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion del proyecto">
       <option name="closed" value="true" />
@@ -163,13 +162,24 @@
       <option name="project" value="LOCAL" />
       <updated>1713866081968</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Creacion de clases del primer package y actualizacion del main">
+      <option name="closed" value="true" />
+      <created>1713866227196</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713866227196</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="Creacion del proyecto" />
     <MESSAGE value="Creacion de los packages" />
     <MESSAGE value="Creacion de clases del primer package y creacion del main" />
