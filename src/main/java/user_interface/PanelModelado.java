@@ -21,15 +21,29 @@ public class PanelModelado extends JPanel {
         JScrollPane scrollPane = new JScrollPane(list);
 
         JPanel panelButtons = new JPanel();
-        JButton addButton = new JButton("Agregar");
+        JButton addButton = new JButton("Agregar Aleatorio");
+        JButton addManualButton = new JButton("Agregar Manualmente");
         JButton removeButton = new JButton("Eliminar");
-        JButton modifyButton = new JButton("Modificar");
+        JButton modifyButton = new JButton("Modificar Manualmente");
 
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Genera una nueva pareja con elementos aleatorios y la agrega a la lista
                 Pareja pareja = new Pareja(random.nextInt(100), random.nextInt(100));
+                listModel.addElement(pareja);
+            }
+        });
+
+        addManualButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Solicita al usuario que ingrese los valores para una nueva pareja y la agrega a la lista
+                String primerElementoStr = JOptionPane.showInputDialog("Ingrese el primer elemento de la pareja:");
+                String segundoElementoStr = JOptionPane.showInputDialog("Ingrese el segundo elemento de la pareja:");
+                int primerElemento = Integer.parseInt(primerElementoStr);
+                int segundoElemento = Integer.parseInt(segundoElementoStr);
+                Pareja pareja = new Pareja(primerElemento, segundoElemento);
                 listModel.addElement(pareja);
             }
         });
@@ -48,16 +62,21 @@ public class PanelModelado extends JPanel {
         modifyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Modifica la pareja seleccionada actualmente en la lista a una nueva pareja generada aleatoriamente
+                // Solicita al usuario que ingrese los nuevos valores para la pareja seleccionada y la modifica
                 int selectedIndex = list.getSelectedIndex();
                 if (selectedIndex != -1) {
-                    Pareja pareja = new Pareja(random.nextInt(100), random.nextInt(100));
+                    String primerElementoStr = JOptionPane.showInputDialog("Ingrese el nuevo primer elemento de la pareja:");
+                    String segundoElementoStr = JOptionPane.showInputDialog("Ingrese el nuevo segundo elemento de la pareja:");
+                    int primerElemento = Integer.parseInt(primerElementoStr);
+                    int segundoElemento = Integer.parseInt(segundoElementoStr);
+                    Pareja pareja = new Pareja(primerElemento, segundoElemento);
                     listModel.set(selectedIndex, pareja);
                 }
             }
         });
 
         panelButtons.add(addButton);
+        panelButtons.add(addManualButton);
         panelButtons.add(removeButton);
         panelButtons.add(modifyButton);
 
