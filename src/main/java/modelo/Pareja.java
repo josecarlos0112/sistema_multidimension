@@ -9,6 +9,9 @@ public class Pareja {
         this.segundoElemento = segundoElemento;
     }
 
+    public Pareja(String llave, String valor) {
+    }
+
     public int getPrimerElemento() {
         return primerElemento;
     }
@@ -23,5 +26,10 @@ public class Pareja {
 
     public void setSegundoElemento(int segundoElemento) {
         this.segundoElemento = segundoElemento;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + primerElemento + ", " + segundoElemento + ")";
     }
 }

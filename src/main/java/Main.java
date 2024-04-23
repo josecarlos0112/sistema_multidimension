@@ -1,9 +1,18 @@
+import modelo.Pareja;
+import user_interface.PanelModelado;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class Main extends JFrame {
+    private JFrame mainFrame;
     public void funcionBoton1() {
         System.out.println("Botón 1 presionado");
+        PanelModelado panelModelado = new PanelModelado();
+        mainFrame.getContentPane().removeAll();
+        mainFrame.add(panelModelado);
+        mainFrame.validate();
+        mainFrame.repaint();
     }
 
     public void funcionBoton2() {
@@ -106,6 +115,8 @@ public class Main extends JFrame {
             panelDerecho.add(Box.createRigidArea(new Dimension(0, 10))); // Espacio entre botones
             panelDerecho.add(button);
         }
+
+        mainFrame = this;
 
         panelDerecho.add(Box.createVerticalGlue());
 
