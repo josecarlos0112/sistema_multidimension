@@ -1,5 +1,4 @@
-import modelo.Pareja;
-import user_interface.PanelModelado;
+import user_interface.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,7 +6,7 @@ import java.awt.*;
 public class Main extends JFrame {
     private JFrame mainFrame;
     public void funcionBoton1() {
-        System.out.println("Botón 1 presionado");
+        //System.out.println("Botón 1 presionado");
         PanelModelado panelModelado = new PanelModelado();
         mainFrame.getContentPane().removeAll();
         mainFrame.add(panelModelado);
@@ -16,7 +15,12 @@ public class Main extends JFrame {
     }
 
     public void funcionBoton2() {
-        System.out.println("Botón 2 presionado");
+        //System.out.println("Botón 2 presionado");
+        PanelAnalisis panelAnalisis = new PanelAnalisis();
+        mainFrame.getContentPane().removeAll();
+        mainFrame.add(panelAnalisis);
+        mainFrame.validate();
+        mainFrame.repaint();
     }
 
     public void funcionBoton3() {
