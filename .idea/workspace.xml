@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fba71096-2cff-4499-9b09-6e5132df268b" name="Changes" comment="actualizacion">
-      <change beforePath="$PROJECT_DIR$/src/main/java/user_interface/PanelModelado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user_interface/PanelModelado.java" afterDir="false" />
-    </list>
+    <list default="true" id="fba71096-2cff-4499-9b09-6e5132df268b" name="Changes" comment="actualizacion del primer boton" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +118,7 @@
       <workItem from="1713785959783" duration="1226000" />
       <workItem from="1713787240848" duration="1311000" />
       <workItem from="1713860368037" duration="6145000" />
-      <workItem from="1713912128928" duration="3310000" />
+      <workItem from="1713912128928" duration="3636000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion del proyecto">
       <option name="closed" value="true" />
@@ -186,7 +184,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713915417631</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="actualizacion del primer boton">
+      <option name="closed" value="true" />
+      <created>1713915668827</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713915668827</updated>
+    </task>
+    <task id="LOCAL-00010" summary="actualizacion del primer boton">
+      <option name="closed" value="true" />
+      <created>1713915679622</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713915679622</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +215,7 @@
     <MESSAGE value="Creacion de clases del primer package y creacion del main" />
     <MESSAGE value="Creacion de clases del primer package y actualizacion del main" />
     <MESSAGE value="actualizacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizacion" />
+    <MESSAGE value="actualizacion del primer boton" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizacion del primer boton" />
   </component>
 </project>

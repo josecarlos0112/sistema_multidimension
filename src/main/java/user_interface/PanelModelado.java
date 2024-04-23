@@ -39,10 +39,8 @@ public class PanelModelado extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Solicita al usuario que ingrese los valores para una nueva pareja y la agrega a la lista
-                String primerElementoStr = JOptionPane.showInputDialog("Ingrese el primer elemento de la pareja:");
-                String segundoElementoStr = JOptionPane.showInputDialog("Ingrese el segundo elemento de la pareja:");
-                int primerElemento = Integer.parseInt(primerElementoStr);
-                int segundoElemento = Integer.parseInt(segundoElementoStr);
+                int primerElemento = solicitarEntero("Ingrese el primer elemento de la pareja:");
+                int segundoElemento = solicitarEntero("Ingrese el segundo elemento de la pareja:");
                 Pareja pareja = new Pareja(primerElemento, segundoElemento);
                 listModel.addElement(pareja);
             }
@@ -65,10 +63,8 @@ public class PanelModelado extends JPanel {
                 // Solicita al usuario que ingrese los nuevos valores para la pareja seleccionada y la modifica
                 int selectedIndex = list.getSelectedIndex();
                 if (selectedIndex != -1) {
-                    String primerElementoStr = JOptionPane.showInputDialog("Ingrese el nuevo primer elemento de la pareja:");
-                    String segundoElementoStr = JOptionPane.showInputDialog("Ingrese el nuevo segundo elemento de la pareja:");
-                    int primerElemento = Integer.parseInt(primerElementoStr);
-                    int segundoElemento = Integer.parseInt(segundoElementoStr);
+                    int primerElemento = solicitarEntero("Ingrese el nuevo primer elemento de la pareja:");
+                    int segundoElemento = solicitarEntero("Ingrese el nuevo segundo elemento de la pareja:");
                     Pareja pareja = new Pareja(primerElemento, segundoElemento);
                     listModel.set(selectedIndex, pareja);
                 }
@@ -82,5 +78,18 @@ public class PanelModelado extends JPanel {
 
         add(scrollPane, BorderLayout.CENTER);
         add(panelButtons, BorderLayout.SOUTH);
+    }
+
+    private int solicitarEntero(String mensaje) {
+        Integer valor = null;
+        do {
+            try {
+                String input = JOptionPane.showInputDialog(mensaje);
+                valor = Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "El valor ingresado debe ser un número entero y no puede estar vacío.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } while (valor == null);
+        return valor;
     }
 }
