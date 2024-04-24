@@ -86,8 +86,8 @@ public class Main extends JFrame {
                 "Gestión de Datos Dinámicos",
                 "Análisis y Organización de Información",
                 "Mapas y Asociación de Datos",
-                "Interfaz Gráfica Avanzada",
-                "Indexación y Visualización de Archivos"
+                "Indexación y Visualización de Archivos",
+                "Salir del Sistema"
         };
 
         // Crear y agregar los botones al panel derecho

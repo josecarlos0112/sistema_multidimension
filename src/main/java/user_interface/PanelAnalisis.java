@@ -1,8 +1,5 @@
 package user_interface;
-package com.thealgorithms.sorts;
 
-import static com.thealgorithms.sorts.SortUtils.*;
-import com.thealgorithms.sorts.QuickSort;
 import data.Registro;
 
 import javax.swing.*;
@@ -16,7 +13,6 @@ public class PanelAnalisis extends JPanel {
     private DefaultTableModel tableModel;
     private JTable table;
     private List<Registro> registros;
-    private QuickSort quickSort;
 
     public PanelAnalisis() {
         setLayout(new BorderLayout());
@@ -31,9 +27,6 @@ public class PanelAnalisis extends JPanel {
         // Crear los botones
         JButton ordenarPorNombreButton = new JButton("Ordenar por nombre");
         JButton ordenarPorVentaButton = new JButton("Ordenar por venta");
-
-        // Crear una instancia de QuickSort
-        quickSort = new QuickSort();
 
         // Agregar los action listeners a los botones
         ordenarPorNombreButton.addActionListener(e -> ordenarPorNombre());
@@ -52,14 +45,14 @@ public class PanelAnalisis extends JPanel {
 
     private void ordenarPorNombre() {
         Registro[] registrosArray = registros.toArray(new Registro[0]);
-        quickSort.sort(registrosArray);
+        quickSort(registrosArray, 0, registrosArray.length - 1, (a, b) -> a.getNombre().compareTo(b.getNombre()));
         registros = new ArrayList<>(Arrays.asList(registrosArray));
         actualizarTabla();
     }
 
     private void ordenarPorVenta() {
         Registro[] registrosArray = registros.toArray(new Registro[0]);
-        quickSort.sort(registrosArray);
+        quickSort(registrosArray, 0, registrosArray.length - 1, (a, b) -> Double.compare(a.getVenta(), b.getVenta()));
         registros = new ArrayList<>(Arrays.asList(registrosArray));
         actualizarTabla();
     }
@@ -69,5 +62,30 @@ public class PanelAnalisis extends JPanel {
         for (Registro registro : registros) {
             tableModel.addRow(new Object[]{registro.getNombre(), registro.getVenta()});
         }
+    }
+
+    private <T> void quickSort(T[] array, int left, int right, java.util.Comparator<T> comparator) {
+        if (left < right) {
+            int pivot = partition(array, left, right, comparator);
+            quickSort(array, left, pivot - 1, comparator);
+            quickSort(array, pivot + 1, right, comparator);
+        }
+    }
+
+    private <T> int partition(T[] array, int left, int right, java.util.Comparator<T> comparator) {
+        T pivot = array[right];
+        int i = left - 1;
+        for (int j = left; j < right; j++) {
+            if (comparator.compare(array[j], pivot) <= 0) {
+                i++;
+                T temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+        T temp = array[i + 1];
+        array[i + 1] = array[right];
+        array[right] = temp;
+        return i + 1;
     }
 }
