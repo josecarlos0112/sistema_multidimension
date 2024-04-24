@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Main extends JFrame {
-    private JFrame mainFrame;
+    private final JFrame mainFrame;
     public void funcionBoton1() {
         //System.out.println("Botón 1 presionado");
         PanelModelado panelModelado = new PanelModelado();
