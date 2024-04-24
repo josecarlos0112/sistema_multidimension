@@ -52,6 +52,7 @@ public class PanelIndexacion extends JPanel {
         int returnValue = fileChooser.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedDirectory = fileChooser.getSelectedFile();
+            archivos.clear(); // Limpiar el TreeMap antes de indexar
             indexarDirectorio(selectedDirectory);
             directorioActualLabel.setText("Directorio actual: " + selectedDirectory.getAbsolutePath());
             JOptionPane.showMessageDialog(null, "Los archivos han sido indexados correctamente.");
@@ -62,10 +63,12 @@ public class PanelIndexacion extends JPanel {
         File[] files = directorio.listFiles();
         if (files != null) {
             for (File file : files) {
-                if (file.isDirectory()) {
-                    indexarDirectorio(file);
-                } else {
-                    archivos.put(file.getName(), file.getAbsolutePath());
+                if (!file.isHidden()) { // Ignorar los archivos y carpetas ocultos
+                    if (file.isDirectory()) {
+                        indexarDirectorio(file);
+                    } else {
+                        archivos.put(file.getName(), file.getAbsolutePath());
+                    }
                 }
             }
         }
