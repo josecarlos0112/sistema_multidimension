@@ -92,6 +92,7 @@ public class PanelAnalisis extends JPanel {
 
     private void filtrarPorVenta() {
         String input = JOptionPane.showInputDialog("Ingrese el valor de venta mínimo:");
+        if (input == null) return; // Agregado para manejar el caso en que se presiona "Cancelar"
         try {
             double minVenta = Double.parseDouble(input);
             registros = registros.stream()
