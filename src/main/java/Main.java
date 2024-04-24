@@ -42,7 +42,9 @@ public class Main extends JFrame {
 }
 
     public void funcionBoton5() {
-        System.out.println("Botón 5 presionado");
+        //System.out.println("Botón 5 presionado");
+        JOptionPane.showMessageDialog(null, "Hasta luego, vuelve pronto");
+        System.exit(0);
     }
     public Main() {
         // Configuración del JFrame
