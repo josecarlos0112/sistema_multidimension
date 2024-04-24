@@ -4,18 +4,23 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.io.File;
-import java.util.TreeMap;
+import java.util.*;
+import java.util.List;
 
 public class PanelIndexacion extends JPanel {
-    private TreeMap<String, String> archivos;
-    private DefaultTableModel tableModel;
-    private JLabel directorioActualLabel;
+    private final TreeMap<String, String> archivos;
+    private final List<String> ordenIndexacion;
+    private final DefaultTableModel tableModel;
+    private final JLabel directorioActualLabel;
+    private boolean ordenAlfabetico;
 
     public PanelIndexacion() {
         setLayout(new BorderLayout());
 
         // Crear el TreeMap para almacenar los nombres de los archivos y sus rutas
         archivos = new TreeMap<>();
+        ordenIndexacion = new ArrayList<>();
+        ordenAlfabetico = true;
 
         // Crear la tabla y el modelo de tabla
         tableModel = new DefaultTableModel(new String[]{"Nombre del archivo", "Ruta completa"}, 0);
@@ -26,10 +31,15 @@ public class PanelIndexacion extends JPanel {
         // Crear los botones
         JButton indexarButton = new JButton("Indexar archivos");
         JButton listarButton = new JButton("Listar archivos");
+        JButton ordenarButton = new JButton("Ordenar alfabéticamente");
 
         // Agregar los action listeners a los botones
         indexarButton.addActionListener(e -> indexarArchivos());
         listarButton.addActionListener(e -> listarArchivos());
+        ordenarButton.addActionListener(e -> {
+            ordenAlfabetico = !ordenAlfabetico;
+            listarArchivos();
+        });
 
         // Crear etiquetas descriptivas
         JLabel indexarLabel = new JLabel("Seleccione un directorio para indexar sus archivos:");
@@ -37,11 +47,13 @@ public class PanelIndexacion extends JPanel {
         directorioActualLabel = new JLabel("Directorio actual: Ninguno");
 
         // Agregar los botones y las etiquetas al panel
-        JPanel panelButtons = new JPanel(new GridLayout(3, 2));
+        JPanel panelButtons = new JPanel(new GridLayout(4, 2));
         panelButtons.add(indexarLabel);
         panelButtons.add(indexarButton);
         panelButtons.add(listarLabel);
         panelButtons.add(listarButton);
+        panelButtons.add(new JLabel("Cambiar orden de listado:"));
+        panelButtons.add(ordenarButton);
         panelButtons.add(directorioActualLabel);
         add(panelButtons, BorderLayout.SOUTH);
     }
@@ -53,6 +65,7 @@ public class PanelIndexacion extends JPanel {
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedDirectory = fileChooser.getSelectedFile();
             archivos.clear(); // Limpiar el TreeMap antes de indexar
+            ordenIndexacion.clear(); // Limpiar la lista de orden de indexación
             indexarDirectorio(selectedDirectory);
             directorioActualLabel.setText("Directorio actual: " + selectedDirectory.getAbsolutePath());
             JOptionPane.showMessageDialog(null, "Los archivos han sido indexados correctamente.");
@@ -68,6 +81,7 @@ public class PanelIndexacion extends JPanel {
                         indexarDirectorio(file);
                     } else {
                         archivos.put(file.getName(), file.getAbsolutePath());
+                        ordenIndexacion.add(file.getName());
                     }
                 }
             }
@@ -76,8 +90,14 @@ public class PanelIndexacion extends JPanel {
 
     private void listarArchivos() {
         tableModel.setRowCount(0);
-        for (String nombreArchivo : archivos.keySet()) {
-            tableModel.addRow(new Object[]{nombreArchivo, archivos.get(nombreArchivo)});
+        if (ordenAlfabetico) {
+            for (String nombreArchivo : archivos.keySet()) {
+                tableModel.addRow(new Object[]{nombreArchivo, archivos.get(nombreArchivo)});
+            }
+        } else {
+            for (String nombreArchivo : ordenIndexacion) {
+                tableModel.addRow(new Object[]{nombreArchivo, archivos.get(nombreArchivo)});
+            }
         }
     }
 }
