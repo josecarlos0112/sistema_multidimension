@@ -8,6 +8,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PanelAnalisis extends JPanel {
     private DefaultTableModel tableModel;
@@ -46,15 +47,21 @@ public class PanelAnalisis extends JPanel {
         // Crear los botones
         JButton ordenarPorNombreButton = new JButton("Ordenar por nombre");
         JButton ordenarPorVentaButton = new JButton("Ordenar por venta");
+        JButton filtrarPorVentaButton = new JButton("Filtrar por venta");
+        JButton filtrarPorRangoDeVentaButton = new JButton("Filtrar por rango de venta");
 
         // Agregar los action listeners a los botones
         ordenarPorNombreButton.addActionListener(e -> ordenarPorNombre());
         ordenarPorVentaButton.addActionListener(e -> ordenarPorVenta());
+        filtrarPorVentaButton.addActionListener(e -> filtrarPorVenta());
+        filtrarPorRangoDeVentaButton.addActionListener(e -> filtrarPorRangoDeVenta());
 
         // Agregar los componentes al panel
         add(new JScrollPane(table), BorderLayout.CENTER);
         add(ordenarPorNombreButton, BorderLayout.NORTH);
         add(ordenarPorVentaButton, BorderLayout.SOUTH);
+        add(filtrarPorVentaButton, BorderLayout.EAST);
+        add(filtrarPorRangoDeVentaButton, BorderLayout.WEST);
     }
 
     public void agregarRegistro(Registro registro) {
@@ -80,6 +87,34 @@ public class PanelAnalisis extends JPanel {
         tableModel.setRowCount(0);
         for (Registro registro : registros) {
             tableModel.addRow(new Object[]{registro.getNombre(), registro.getVenta()});
+        }
+    }
+
+    private void filtrarPorVenta() {
+        String input = JOptionPane.showInputDialog("Ingrese el valor de venta mínimo:");
+        try {
+            double minVenta = Double.parseDouble(input);
+            registros = registros.stream()
+                    .filter(registro -> registro.getVenta() >= minVenta)
+                    .collect(Collectors.toList());
+            actualizarTabla();
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "El valor ingresado debe ser un número.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    private void filtrarPorRangoDeVenta() {
+        String inputMin = JOptionPane.showInputDialog("Ingrese el valor de venta mínimo:");
+        String inputMax = JOptionPane.showInputDialog("Ingrese el valor de venta máximo:");
+        try {
+            double minVenta = Double.parseDouble(inputMin);
+            double maxVenta = Double.parseDouble(inputMax);
+            registros = registros.stream()
+                    .filter(registro -> registro.getVenta() >= minVenta && registro.getVenta() <= maxVenta)
+                    .collect(Collectors.toList());
+            actualizarTabla();
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Los valores ingresados deben ser números.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
