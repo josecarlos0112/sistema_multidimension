@@ -24,6 +24,25 @@ public class PanelAnalisis extends JPanel {
         // Crear la lista de registros
         registros = new ArrayList<>();
 
+        agregarRegistro(new Registro("Carlos", 100.0));
+        agregarRegistro(new Registro("Ana", 200.0));
+        agregarRegistro(new Registro("Luis", 150.0));
+        agregarRegistro(new Registro("Maria", 250.0));
+        agregarRegistro(new Registro("Juan", 300.0));
+        agregarRegistro(new Registro("Sofia", 350.0));
+        agregarRegistro(new Registro("Pedro", 400.0));
+        agregarRegistro(new Registro("Lucia", 450.0));
+        agregarRegistro(new Registro("Pablo", 500.0));
+        agregarRegistro(new Registro("Carmen", 550.0));
+        agregarRegistro(new Registro("Jose", 600.0));
+        agregarRegistro(new Registro("Teresa", 650.0));
+        agregarRegistro(new Registro("Antonio", 700.0));
+        agregarRegistro(new Registro("Isabel", 750.0));
+        agregarRegistro(new Registro("Francisco", 800.0));
+        agregarRegistro(new Registro("Laura", 850.0));
+        agregarRegistro(new Registro("Javier", 900.0));
+        agregarRegistro(new Registro("Susana", 950.0));
+
         // Crear los botones
         JButton ordenarPorNombreButton = new JButton("Ordenar por nombre");
         JButton ordenarPorVentaButton = new JButton("Ordenar por venta");
