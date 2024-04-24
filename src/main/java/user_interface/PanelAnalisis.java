@@ -1,18 +1,22 @@
-package user_interface;// Clase PanelAnalisis
+package user_interface;
+package com.thealgorithms.sorts;
 
+import static com.thealgorithms.sorts.SortUtils.*;
+import com.thealgorithms.sorts.QuickSort;
 import data.Registro;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Arrays;
 import java.util.List;
 
 public class PanelAnalisis extends JPanel {
     private DefaultTableModel tableModel;
     private JTable table;
     private List<Registro> registros;
+    private QuickSort quickSort;
 
     public PanelAnalisis() {
         setLayout(new BorderLayout());
@@ -27,6 +31,9 @@ public class PanelAnalisis extends JPanel {
         // Crear los botones
         JButton ordenarPorNombreButton = new JButton("Ordenar por nombre");
         JButton ordenarPorVentaButton = new JButton("Ordenar por venta");
+
+        // Crear una instancia de QuickSort
+        quickSort = new QuickSort();
 
         // Agregar los action listeners a los botones
         ordenarPorNombreButton.addActionListener(e -> ordenarPorNombre());
@@ -44,12 +51,16 @@ public class PanelAnalisis extends JPanel {
     }
 
     private void ordenarPorNombre() {
-        registros.sort(Comparator.comparing(Registro::getNombre));
+        Registro[] registrosArray = registros.toArray(new Registro[0]);
+        quickSort.sort(registrosArray);
+        registros = new ArrayList<>(Arrays.asList(registrosArray));
         actualizarTabla();
     }
 
     private void ordenarPorVenta() {
-        registros.sort(Comparator.comparing(Registro::getVenta));
+        Registro[] registrosArray = registros.toArray(new Registro[0]);
+        quickSort.sort(registrosArray);
+        registros = new ArrayList<>(Arrays.asList(registrosArray));
         actualizarTabla();
     }
 

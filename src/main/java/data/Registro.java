@@ -1,6 +1,6 @@
 package data;
 
-public class Registro {
+public class Registro implements Comparable<Registro> {
     private String nombre;
     private double venta;
 
@@ -15,5 +15,10 @@ public class Registro {
 
     public double getVenta() {
         return venta;
+    }
+
+    @Override
+    public int compareTo(Registro o) {
+        return this.nombre.compareTo(o.nombre);
     }
 }

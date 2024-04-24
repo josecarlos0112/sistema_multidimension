@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fba71096-2cff-4499-9b09-6e5132df268b" name="Changes" comment="actualizacion del primer boton para validar informacion">
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/Registro.java" afterDir="false" />
+    <list default="true" id="fba71096-2cff-4499-9b09-6e5132df268b" name="Changes" comment="creacion del README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Registro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user_interface/PanelAnalisis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user_interface/PanelAnalisis.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -57,7 +61,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -121,7 +125,7 @@
       <workItem from="1713785959783" duration="1226000" />
       <workItem from="1713787240848" duration="1311000" />
       <workItem from="1713860368037" duration="6145000" />
-      <workItem from="1713912128928" duration="4128000" />
+      <workItem from="1713912128928" duration="5681000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion del proyecto">
       <option name="closed" value="true" />
@@ -219,7 +223,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713916030673</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="creacion del segundo boton e implementacion del primer ordenamiento">
+      <option name="closed" value="true" />
+      <created>1713916518336</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713916518336</updated>
+    </task>
+    <task id="LOCAL-00014" summary="creacion del README.md">
+      <option name="closed" value="true" />
+      <created>1713916586067</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713916586067</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +256,8 @@
     <MESSAGE value="actualizacion" />
     <MESSAGE value="actualizacion del primer boton" />
     <MESSAGE value="actualizacion del primer boton para validar informacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizacion del primer boton para validar informacion" />
+    <MESSAGE value="creacion del segundo boton e implementacion del primer ordenamiento" />
+    <MESSAGE value="creacion del README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="creacion del README.md" />
   </component>
 </project>
