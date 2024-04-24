@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fba71096-2cff-4499-9b09-6e5132df268b" name="Changes" comment="actualizaciones al filtro de busqueda">
-      <change afterPath="$PROJECT_DIR$/src/main/java/user_interface/PanelRelaciones.java" afterDir="false" />
+    <list default="true" id="fba71096-2cff-4499-9b09-6e5132df268b" name="Changes" comment="actualizaciones tercer boton, creacion de mapaasss">
+      <change afterPath="$PROJECT_DIR$/src/main/java/user_interface/PanelIndexacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user_interface/InterfazUsuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user_interface/PanelDatos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user_interface/PanelOrganizacion.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +127,7 @@
       <workItem from="1713785959783" duration="1226000" />
       <workItem from="1713787240848" duration="1311000" />
       <workItem from="1713860368037" duration="6145000" />
-      <workItem from="1713912128928" duration="6668000" />
+      <workItem from="1713912128928" duration="7100000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion del proyecto">
       <option name="closed" value="true" />
@@ -286,7 +289,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713918553971</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="actualizaciones tercer boton, creacion de mapaasss">
+      <option name="closed" value="true" />
+      <created>1713918936749</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1713918936749</updated>
+    </task>
+    <task id="LOCAL-00022" summary="actualizaciones tercer boton, creacion de mapaasss">
+      <option name="closed" value="true" />
+      <created>1713918956403</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1713918956403</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +326,7 @@
     <MESSAGE value="creacion del README.md" />
     <MESSAGE value="actualizaciones" />
     <MESSAGE value="actualizaciones al filtro de busqueda" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizaciones al filtro de busqueda" />
+    <MESSAGE value="actualizaciones tercer boton, creacion de mapaasss" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizaciones tercer boton, creacion de mapaasss" />
   </component>
 </project>

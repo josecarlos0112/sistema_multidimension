@@ -33,7 +33,12 @@ public class Main extends JFrame {
     }
 
     public void funcionBoton4() {
-        System.out.println("Botón 4 presionado");
+        //System.out.println("Botón 4 presionado");
+        PanelIndexacion panelIndexacion = new PanelIndexacion();
+        mainFrame.getContentPane().removeAll();
+        mainFrame.add(panelIndexacion);
+        mainFrame.validate();
+        mainFrame.repaint();
     }
 
     public void funcionBoton5() {
