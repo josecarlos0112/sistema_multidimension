@@ -9,6 +9,7 @@ import java.util.TreeMap;
 public class PanelIndexacion extends JPanel {
     private TreeMap<String, String> archivos;
     private DefaultTableModel tableModel;
+    private JLabel directorioActualLabel;
 
     public PanelIndexacion() {
         setLayout(new BorderLayout());
@@ -30,10 +31,18 @@ public class PanelIndexacion extends JPanel {
         indexarButton.addActionListener(e -> indexarArchivos());
         listarButton.addActionListener(e -> listarArchivos());
 
-        // Agregar los botones al panel
-        JPanel panelButtons = new JPanel();
+        // Crear etiquetas descriptivas
+        JLabel indexarLabel = new JLabel("Seleccione un directorio para indexar sus archivos:");
+        JLabel listarLabel = new JLabel("Presione para listar los archivos indexados:");
+        directorioActualLabel = new JLabel("Directorio actual: Ninguno");
+
+        // Agregar los botones y las etiquetas al panel
+        JPanel panelButtons = new JPanel(new GridLayout(3, 2));
+        panelButtons.add(indexarLabel);
         panelButtons.add(indexarButton);
+        panelButtons.add(listarLabel);
         panelButtons.add(listarButton);
+        panelButtons.add(directorioActualLabel);
         add(panelButtons, BorderLayout.SOUTH);
     }
 
@@ -44,6 +53,7 @@ public class PanelIndexacion extends JPanel {
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedDirectory = fileChooser.getSelectedFile();
             indexarDirectorio(selectedDirectory);
+            directorioActualLabel.setText("Directorio actual: " + selectedDirectory.getAbsolutePath());
             JOptionPane.showMessageDialog(null, "Los archivos han sido indexados correctamente.");
         }
     }
