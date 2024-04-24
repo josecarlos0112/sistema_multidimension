@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fba71096-2cff-4499-9b09-6e5132df268b" name="Changes" comment="actualizaciones">
-      <change beforePath="$PROJECT_DIR$/src/main/java/user_interface/PanelAnalisis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user_interface/PanelAnalisis.java" afterDir="false" />
+    <list default="true" id="fba71096-2cff-4499-9b09-6e5132df268b" name="Changes" comment="actualizaciones al filtro de busqueda">
+      <change afterPath="$PROJECT_DIR$/src/main/java/user_interface/PanelRelaciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +124,7 @@
       <workItem from="1713785959783" duration="1226000" />
       <workItem from="1713787240848" duration="1311000" />
       <workItem from="1713860368037" duration="6145000" />
-      <workItem from="1713912128928" duration="6294000" />
+      <workItem from="1713912128928" duration="6668000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion del proyecto">
       <option name="closed" value="true" />
@@ -261,7 +262,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713918226973</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="actualizaciones al filtro de busqueda">
+      <option name="closed" value="true" />
+      <created>1713918534786</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713918534786</updated>
+    </task>
+    <task id="LOCAL-00019" summary="actualizaciones al filtro de busqueda">
+      <option name="closed" value="true" />
+      <created>1713918544942</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713918544942</updated>
+    </task>
+    <task id="LOCAL-00020" summary="actualizaciones al filtro de busqueda">
+      <option name="closed" value="true" />
+      <created>1713918553971</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1713918553971</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +306,7 @@
     <MESSAGE value="creacion del segundo boton e implementacion del primer ordenamiento" />
     <MESSAGE value="creacion del README.md" />
     <MESSAGE value="actualizaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizaciones" />
+    <MESSAGE value="actualizaciones al filtro de busqueda" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizaciones al filtro de busqueda" />
   </component>
 </project>

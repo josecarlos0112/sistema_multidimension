@@ -24,7 +24,12 @@ public class Main extends JFrame {
     }
 
     public void funcionBoton3() {
-        System.out.println("Botón 3 presionado");
+        //System.out.println("Botón 3 presionado");
+        PanelRelaciones panelRelaciones = new PanelRelaciones();
+        mainFrame.getContentPane().removeAll();
+        mainFrame.add(panelRelaciones);
+        mainFrame.validate();
+        mainFrame.repaint();
     }
 
     public void funcionBoton4() {
