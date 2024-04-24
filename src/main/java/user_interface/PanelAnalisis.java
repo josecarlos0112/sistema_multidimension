@@ -107,6 +107,7 @@ public class PanelAnalisis extends JPanel {
     private void filtrarPorRangoDeVenta() {
         String inputMin = JOptionPane.showInputDialog("Ingrese el valor de venta mínimo:");
         String inputMax = JOptionPane.showInputDialog("Ingrese el valor de venta máximo:");
+        if (inputMin == null || inputMax == null) return; // Agregado para manejar el caso en que se presiona "Cancelar"
         try {
             double minVenta = Double.parseDouble(inputMin);
             double maxVenta = Double.parseDouble(inputMax);
